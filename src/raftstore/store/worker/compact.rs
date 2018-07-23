@@ -158,6 +158,8 @@ impl Runnable<Task> for Runner {
                                 "compact range ({:?}, {:?}) for cf {:?} failed, error {:?}",
                                 start, end, cf, e
                             );
+                        } else {
+                            info!("compact range ({:?}, {:?}) for cf {:?} finished", start, end, cf);
                         }
                     }
                 },
